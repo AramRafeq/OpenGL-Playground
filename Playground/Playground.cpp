@@ -1,15 +1,18 @@
 #include <iostream>
 #include<GL\glut.h>
 
-void displayMe(void)
-{
-    glClear(GL_COLOR_BUFFER_BIT);
+void vertix() {
     glBegin(GL_POLYGON);
     glVertex3f(0.0, 0.0, 0.0);
     glVertex3f(0.5, 0.0, 0.0);
     glVertex3f(0.5, 0.5, 0.0);
     glVertex3f(0.0, 0.5, 0.0);
     glEnd();
+}
+void displayMe(void)
+{
+    glClear(GL_COLOR_BUFFER_BIT);
+    vertix();
     glFlush();
 }
 
