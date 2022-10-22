@@ -2,7 +2,7 @@
 #include<GL\glut.h>
 
 void vertix() {
-    glBegin(GL_POLYGON);
+    glBegin(GL_LINE_LOOP);
     glVertex3f(0.0, 0.0, 0.0);
     glVertex3f(0.5, 0.0, 0.0);
     glVertex3f(0.5, 0.5, 0.0);
@@ -12,6 +12,9 @@ void vertix() {
 void displayMe(void)
 {
     glClear(GL_COLOR_BUFFER_BIT);
+    glColor3f(1, 1, 0);
+    vertix();
+    glScalef(2, 2,1);
     vertix();
     glFlush();
 }
